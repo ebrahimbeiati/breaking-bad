@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-function SearchBar({ setQuery }) {
+function Searchbar({ setSearch }) {
   const [text, setText] = useState("");
 
   const handelChange = (e) => {
     setText(e.target.value);
-    setQuery(e.target.value);
+    setSearch(e.target.value);
   };
   return (
     <div>
@@ -19,7 +19,7 @@ function SearchBar({ setQuery }) {
             name="search"
             value={text}
             onChange={handelChange}
-            id="serach"
+            id="search"
           />
         </form>
       </section>
@@ -27,4 +27,4 @@ function SearchBar({ setQuery }) {
   );
 }
 
-export default SearchBar;
+export default Searchbar;
