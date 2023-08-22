@@ -1,7 +1,6 @@
 import axios from "axios";
 
-export default axios.create(
-    {
-        baseURL: "https://www.breakingbadapi.com/api"
-    }
-)
+export default axios.create({
+  baseURL: "https://breakingbadapi.com/api/characters",
+});
+

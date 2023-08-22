@@ -1,33 +1,30 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
-const Searchbar = (setSearch) => {
-    const[text, setText]=useState('');
+function SearchBar({ setQuery }) {
+  const [text, setText] = useState("");
 
-    const handleChange =(e)=>{
-        setText(e.target.value);
-    }
-
+  const handelChange = (e) => {
+    setText(e.target.value);
+    setQuery(e.target.value);
+  };
   return (
     <div>
-    <section>
-        <form >
-            <input
-            className='form-control'
-             type="text"
-              placeholder="Search"
-              autoFocus
-              name='search'
-              value={text}
-              onChange={handleChange}
-              id='search' 
-            />
-
+      <section className="search">
+        <form>
+          <input
+            className="form-control"
+            placeholder="Search Characters"
+            autoFocus
+            type="text"
+            name="search"
+            value={text}
+            onChange={handelChange}
+            id="serach"
+          />
         </form>
-    </section>
-
-
+      </section>
     </div>
-  )
+  );
 }
 
-export default Searchbar
+export default SearchBar;

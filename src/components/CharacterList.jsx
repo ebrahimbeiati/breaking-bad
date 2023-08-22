@@ -1,21 +1,13 @@
-import React from 'react'
-import CharacterListItem from './CharacterListItem'
-
-const CharacterList = (items) => {
+import React from "react";
+import CharacterListItem from "./CharacterListItem";
+function CharacterList({ items }) {
   return (
-    <div>
-        <section className='cards'>
-        {
-            items.items.map((item)=>{
-                return <CharacterListItem key={item.char_id} item={item}/>
-            })
-        }
-
-
-
-        </section>
-    </div>
-  )
+    <section className="cards">
+      {items.map((item) => (
+        <CharacterListItem item={item} key={item.char_id} />
+      ))}
+    </section>
+  );
 }
 
-export default CharacterList
+export default CharacterList;
